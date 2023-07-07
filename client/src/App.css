@@ -1,0 +1,153 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  /* background: #34495e; */
+}
+
+.carousel-item:nth-child(odd) {
+  background-color: #f5f5f5; /* Set the background color for odd-numbered items */
+}
+
+.carousel-item:nth-child(even) {
+  background-color: #d7bfdc; /* Set the background color for even-numbered items */
+}
+
+
+.h-saved {
+
+  text-align: center;
+  margin: 24px 0 12px 0;
+    color: #6e00be;
+    font-size: 30px;
+    font-weight: bold;
+  
+
+}
+
+.btn-next {
+  margin: 10px 0 12px 0;
+}
+
+.btn-prev {
+  margin: 10px 0 12px 0;
+}
+
+/* .nav-item {
+  margin: 0 10px 0 10px;
+  padding-left: 200px;
+} */
+
+.container {
+  margin-left: 16px;
+  margin-top: 2px;
+}
+
+.navbar-brand {
+  color: #6e00be;
+  font-size: 30px;
+  font-weight: bold;
+  margin-left: 20px;
+}
+
+
+
+.btn-dtls {
+  background-color: #6e00be;
+  border-color: #6e00be;
+}
+
+.btn-src {
+  background-color: #6e00be;
+  border-color: #6e00be;
+}
+
+.btn-parse {
+  background-color: #6e00be;
+  border-color: #6e00be;
+}
+
+.header-title {
+  color: #6e00be;
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.btn-save {
+  background-color: #6e00be;
+  border-color: #6e00be;
+}
+
+.btn-add {
+  background-color: #6e00be;
+  border-color: #6e00be;
+}
+
+.btn-next {
+  background-color: #6e00be;
+  border-color: #6e00be;
+}
+
+.btn-prev {
+  background-color: #6e00be;
+  border-color: #6e00be;
+  margin-right: 10px;
+}
+
+.list-group-item:nth-child(even) {
+  background-color: #f8f9fa; /* Set the background color for even list items */
+}
+
+.list-group-item:nth-child(odd) {
+  background-color: #f8f9fa; /* Set the background color for odd list items */
+  color: black;
+  border-width: 0;
+}
+
+
+.active > .page-link, .page-link.active {
+  background-color: #6e00be;
+  border-color: #6e00be;
+  color: white;
+}
+
+textarea {
+  resize: both;
+}
+
+.bg-primary {
+  background-color: #6e00be !important;
+}
+
+.updated {
+  display: ruby;
+}
+
+.up-paragraph {
+  color: #6e00be;
+  font-size: 15px;
+  font-weight: bold;
+  margin-left: 10px;
+}
+
+
+.edit-data-btn {
+  margin-left: 10px;
+  background-color:#e0e0e0;
+  border-radius: 15px;
+}
+.delete-btn {
+  margin-left: 10px;
+  border-radius: 15px;
+}
+
+.ol-saved-data {
+  background-color: #f8f9fa;
+  border-radius: 10px;
+  margin-bottom: 5px;
+  padding-bottom: 10px;
+  padding-top: 10px;
+  margin-top: 5px;
+}
+
+  
