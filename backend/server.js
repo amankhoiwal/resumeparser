@@ -397,10 +397,28 @@ app.get("/sync-data", (req, res) => {
     }
 
     const data = results;
+    const client = new Client({ node: 'http://localhost:9200' });
 
     if (data.length === 0) {
-      // No new data since the last synchronization
-      res.json({ message: "No new data to sync." });
+      // Delete all documents from the Elasticsearch index
+      client.deleteByQuery({
+        index: 'resumedetails',
+        body: {
+          query: {
+            match_all: {}
+          }
+        }
+      })
+        .then(response => {
+
+          res.json({ message: "No new data to sync." });
+        })
+        .catch(error => {
+          // Handle the error
+          console.error(error);
+          res.status(500).json({ error: "An error occurred while removing data from Elasticsearch." });
+        });
+    
       return;
     }
 

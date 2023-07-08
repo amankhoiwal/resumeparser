@@ -14,6 +14,7 @@ const ShowDetailsPage = () => {
   const [totalPages, setTotalPages] = useState(1);
   const [editingIndex, setEditingIndex] = useState(-1);
   const [edited, setEdited] = useState(false);
+  const [updatedStatus, setUpdatedStatus] = useState({});
 
   const fetchResumeDetails = () => {
     axios
@@ -45,6 +46,11 @@ const ShowDetailsPage = () => {
         if (response.status === 200) {
           setEdited(true);
           console.log("Resume updated successfully.");
+
+          // Update the isupdated status immediately
+          const updatedStatusCopy = { ...updatedStatus };
+          updatedStatusCopy[id] = true;
+          setUpdatedStatus(updatedStatusCopy);
           // update the detailsList state with the updated detail
           const updatedList = [...detailsList];
           updatedList[id] = { ...updatedDetail };
@@ -59,8 +65,6 @@ const ShowDetailsPage = () => {
   };
 
   const deleteRecord = (id) => {
-    
-
     axios
       .delete(`http://localhost:3005/resumedetails/${id}`)
       .then((response) => {
@@ -336,7 +340,7 @@ const ShowDetailsPage = () => {
 
                     <div className="updated">
                       <p>Name: {details.name}</p>
-                      {details.isupdated === 1 ? (
+                      {details.isupdated === 1 || updatedStatus[index] ? (
                         <p className="up-paragraph">Updated</p>
                       ) : (
                         <p className="up-paragraph">Created</p>
